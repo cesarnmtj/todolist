@@ -18,9 +18,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
     <div></div>
-
 </head>
 <body onload="loadbody();">
 
@@ -41,3 +40,82 @@
         <a class="btn btn-secondary btn-sm" href="login.html">
             <i class="fas fa-sign-in-alt"></i> LOGIN
         </a>
+    </div><br>
+    <!-- todo-form -->
+    <div class="container">
+        <form autocomplete="off" class="form-group" id="form">
+            <input type="text" class="form-control" id="todos" disabled><br>
+            <button type="submit" class="btn btn-success btn-block" disabled>ADD</button>
+        </form><br>
+        <div class="error">No tiene acceso a esta aplicación, por favor registre su cuenta o inicie sesión</div>
+    </div>
+      <!-ssss-->
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">REGISTRAR</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <form autocomplete="off" class="form-group" id="signup-form">
+                     <label for="">Nombre</label>
+                     <input type="text" class="form-control" id="name" required><br>
+                     <label for="">Email</label>
+                     <input type="email" class="form-control" id="email" required><br>
+                     <label for="">Contraseña</label>
+                     <input type="password" class="form-control" id="password" required minlength="6"><br>
+                     <button type="submit" class="btn btn-primary">Registrar</button>
+                 </form>
+             </div>
+             <div class="container error" id="signupError"></div>
+             <div class="container error" id="signupError2"></div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!--BOOSTRAP SCRIPTS-->
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+<script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAZWeYhEoIl_dkBEvvHJ7akIanQCu0swdY",
+      authDomain: "todo-list-5ffe8.firebaseapp.com",
+      projectId: "todo-list-5ffe8",
+      storageBucket: "todo-list-5ffe8.appspot.com",
+      messagingSenderId: "850682563527",
+      appId: "1:850682563527:web:59e3cca8cf03bee5a6a7e2",
+      measurementId: "G-CJ7FCMTMFX"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+</script>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
