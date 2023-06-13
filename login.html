@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css">
+    
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- fontAweosum -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- googleFonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Tangerine|Lato|Gamja+Flower|Open+Sans|Roboto+Slab|Indie+Flower|Lobster|Open+Sans|Kosugi+Maru">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+    <div class="login-box">
+        <img src="img/logo.png" class="avatar" alt="Avatar Image">
+      <h1>Login Here</h1>
+        <hr>
+        <form autocomplete="off" class="form-group" id="login-form">
+            <label for="">Email</label>
+            <input type="email" id="login-email" class="form-control" placeholder="Correo electrónico" required>
+            <label for="">Contraseña</label>
+            <input type="password" id="login-password" class="form-control" placeholder="Contraseña" required>
+            <button type="submit" class="btn btn-success btn-block">LOGIN</button>
+            <br>    </br>
+            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
+             data-auto-logout-link="true" data-use-continue-as="true"></div>
+             <br>    </br>
+            
+            <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModal">
+                 Registro
+            
+            <div class="container error" id="loginError"></div>
+            
+        </form>
+        
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">REGISTRAR</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <form autocomplete="off" class="form-group" id="signup-form">
+                     <label for="">Nombre</label>
+                     <input type="text" class="form-control" id="name" required><br>
+                     <label for="">Email</label>
+                     <input type="email" class="form-control" id="email" required><br>
+                     <label for="">Contraseña</label>
+                     <input type="password" class="form-control" id="password" required minlength="6"><br>
+                     <button type="submit" class="btn btn-primary">Registrar</button>
+                 </form>
+             </div>
+             <div class="container error" id="signupError"></div>
+             <div class="container error" id="signupError2"></div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             </div>
+         </div>
+     </div>
+ </div>
+
+    <!--BOOSTRAP SCRIPTS-->
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+     <!-- TODO: Add SDKs for Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+ 
+     <script>
+         var firebaseConfig = {
+      apiKey: "AIzaSyAZWeYhEoIl_dkBEvvHJ7akIanQCu0swdY",
+      authDomain: "todo-list-5ffe8.firebaseapp.com",
+      projectId: "todo-list-5ffe8",
+      storageBucket: "todo-list-5ffe8.appspot.com",
+      messagingSenderId: "850682563527",
+      appId: "1:850682563527:web:59e3cca8cf03bee5a6a7e2",
+      measurementId: "G-CJ7FCMTMFX"
+    };
+ 
+         firebase.initializeApp(firebaseConfig);
+ 
+         const auth = firebase.auth();
+         const db = firebase.firestore();
+     </script>
+
+    <script src="login.js"></script>
+
+
+    
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '736237240834008',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v8.0'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0&appId=606106830674947&autoLogAppEvents=1" 
+nonce="jnBcDoBe"></script>
+ <!--  <script>
+  $(()=>{
+    const objAuth = new Autentication()
+    $("fb-login-button").click(()=> objAuth.authCuentaFacebook());
+})
+
+
+</script>
+
+<script>
+    authCuentaFacebook(){
+        const provider = new firebase.auth.FacebookAuthProvider();
+
+        firebase.auth().signInWithPopup(provider).then(result => {
+            $('#avatar').attr('src', result.user.photoURL)
+            $('.modal').modal('close')
+            Materialize.toast('Bienvenido ${result.user.displayName}!!',4000)
+        })
+        .catch(error => {
+            console.error(error)
+            Materialize.toast('error:$',4000)
+        })
+    }
+</script> -->
+
+</body>
+
+
+
+</html>
