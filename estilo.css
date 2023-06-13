@@ -19,8 +19,8 @@ body {
 .my-container {
     width: 100%;
     height: auto;
-    background: #0170ad;
-    color: #fff;
+    background: #d17709;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     display: flex;
@@ -61,3 +61,9 @@ body {
     outline: none !important;
     cursor: pointer;
 }
+
+.button-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
