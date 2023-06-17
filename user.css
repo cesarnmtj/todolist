@@ -14,3 +14,14 @@ body {
     overflow: hidden;
     max-width: 100%;
 }
+
+.my-container{
+	font-family: 'Roboto', 'Sans serif';
+	width: 100%;
+    height: 50vh;
+    background: linear-gradient(to right, #005C98, #505BDA);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 5px 5px;   
+}
