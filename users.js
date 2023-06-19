@@ -55,12 +55,7 @@ function renderData(individualDoc) {
     parentDiv.appendChild(todoDiv);
     parentDiv.appendChild(trash);
 
-    // todoContainer.innerHTML += `
-    //     <div class="container todo-box" id ="${individualDoc.doc.id}">
-    //       <div>${individualDoc.doc.data().todos}</div>
-    //       <button onClick="deleteTodo('${individualDoc.doc.id}','${user.uid}')"><i class='fas fa-trash'></i></button>
-    //     </div>
-    //     `
+
     todoContainer.appendChild(parentDiv);
 
     // trash clicking event
