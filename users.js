@@ -6,7 +6,7 @@ const spanWeekday = document.getElementById("weekday");
 const todoContainer = document.getElementById('todo-container');
 
 function loadbody() {
-    // console.log('body is loaded');
+    
     const date = new Date();
     const month = date.toLocaleString('default', { month: 'long' });
     const myDate = date.getDate();
@@ -20,7 +20,7 @@ function loadbody() {
 
 }
 
-// checking if user is signed in or not
+
 auth.onAuthStateChanged(user => {
     if (user) {
         console.log('user is signed in at users.html');
