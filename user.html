@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <!-- css -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- fontAweosum -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- googleFonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Tangerine|Lato|Gamja+Flower|Open+Sans|Roboto+Slab|Indie+Flower|Lobster|Open+Sans|Kosugi+Maru">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="user.css">
+    </head>
+
+
+<body onload="loadbody();">
+    <!-- date and time section -->
+<head>
+
+
+        <div class="my-container">
+            <div>
+                
+            </div>
+            <h3>Bienvenido(a), <span id="username"></span></h3>
+            <h5>Hagamos una lista</h5>
+            <div class="date-time">
+                <span id="date">date</span>
+                <span id="month">month</span>
+                <span id="year">year</span>
+                <span id="weekday">weekday</span>
+            </div><br>
+            <button class="btn btn-danger btn-sm" onclick="logout()">Salir</button>
+
+
+            
+        </div>
+        
+
+        
+        <!-- todos container -->
+        
+        <div class="container todo-container" id="todo-container">
+            
+            <div class="contenedor">
+                <div class="row">
+                    
+                    <div class="c-md-12">
+                        <div class="share">
+                            
+                            <a href="http://www.facebook.com/sharer.php?u=www.todolist.com&t=To do list" target="_blank" class="facebook">Facebook</a><br>
+                            <a href="https://twitter.com/intent/tweet?text=ToDoList&url=www.todolist.com&via=Tarea&hashtags=#miempresa" target="_blank" class="twitter">Twitter</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+    <!-- todo-form -->  
+   
+        
+            <div class="container">
+                <h3 class="mt-4 text-center">Lista de Tareas</h3>		
+                <form autocomplete="off" id="form" class="form-group">
+
+                    <input type="text" class="form-control" id="todos" required><br>
+                    <form action="users.html" target="_blank">
+
+                        <p>
+                      
+                          Categoria:<br>
+                      
+                          <input type="checkbox" name="trabajo"> Trabajo<br>
+                      
+                          <input type="checkbox" name="familia"> Familia<br>
+                      
+                          <input type="checkbox" name="diversion"> Diversion<br>
+                          
+                          <input type="checkbox" name="salud"> Salud<br>
+                      
+                        </p>
+                      
+                        <button type="submit" class="btn btn-success btn-block">Añadir</button>
+                      </form>
+                      <div class="container todo-container" id="todo-container">
+                </form>      	
+                
+            </div>
+    
+        
+        <!--<div class="wrap">
+            <h1>Selecciona una categoria:</h1>
+            <div class="store-wrapper">
+                <div class="category_list">
+                    <a href="#" class="category_item" category="all">Todo</a><br>
+                    <a href="#" class="category_item" category="ordenadores">Trabajo</a>
+                    <br></br>
+                    <a href="#" class="category_item" category="laptops">Familia</a> <br></br>
+                    <a href="#" class="category_item" category="smartphones">Diversion</a> <br></br>
+                </div>
+                
+            </div>
+        </div>-->
+
+        </head>          
+            
+        
+
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+     <!-- TODO: Add SDKs for Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+ 
+     <script>
+         var firebaseConfig = {
+      apiKey: "AIzaSyAZWeYhEoIl_dkBEvvHJ7akIanQCu0swdY",
+      authDomain: "todo-list-5ffe8.firebaseapp.com",
+      projectId: "todo-list-5ffe8",
+      storageBucket: "todo-list-5ffe8.appspot.com",
+      messagingSenderId: "850682563527",
+      appId: "1:850682563527:web:59e3cca8cf03bee5a6a7e2",
+      measurementId: "G-CJ7FCMTMFX"
+      
+    };
+ 
+         firebase.initializeApp(firebaseConfig);
+ 
+         const auth = firebase.auth();
+         const fs = firebase.firestore();
+         const db = firebase.database();
+     </script>
+     
+ 
+
+    <script src="users.js"></script>
+</head>
+      
+
+</body>
+
+</html>
