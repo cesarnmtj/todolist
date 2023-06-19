@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #dfc415;
     overflow: hidden;
     max-width: 100%;
 }
@@ -19,7 +19,7 @@ body {
 	font-family: 'Roboto', 'Sans serif';
 	width: 100%;
     height: 50vh;
-    background: linear-gradient(to right, #005C98, #505BDA);
+    background: linear-gradient(to right, #005C98, #d17709);
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -40,7 +40,7 @@ body {
 }
 
 .container p {
-background-color: linear-gradient(to right, #005C98, #505BDA) ;
+background-color: linear-gradient(to right, #005C98, #d17709) ;
 flex-direction: row;
 flex-wrap: row;
 
@@ -112,22 +112,7 @@ padding: auto;
 }
 
 
-.share .facebook {
-    background: #050599;
-}
-.share .facebook:hover {
-    color: #050599;
-    background: transparent;
-    border: 1px dashed #050599;
-}
-.share .twitter {
-    background: #00a2ff;
-}
-.share .twitter:hover {
-    color: #00a2ff;
-    background: transparent;
-    border: 1px dashed #00a2ff;
-}
+
 
 
 
